@@ -1,6 +1,6 @@
 # Silverblue Enhanced
 
-*A shell script for Fedora Silverblue to reflect my tastes.*
+*A setup script for Fedora Silverblue that reflects my tastes.*
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -11,15 +11,12 @@
 
 ## Introduction
 
-This is a shell script; it does not pretend to be more than that. It is backed by upstream Fedora Atomic and, even it if it dies, shall stay undead. I've written it to improve GNOME to my preferences, these are:
+This is a script and only a script. Without overlays, it is mostly backed by upstream Fedora Atomic. I've written it to fit GNOME to my preferences, among these are:
 
 - **Blur My Shell, Dash to Dock, other extensions**
 - **elementary OS default wallpapers**
 - **Zen as the default web browser**
 - **VSCodium and VLC (with codecs) from Flathub**
-- **Zero overlays**
-- **Bash Vi Mode**
-- **Other careful tweaks**
 
 ## Screenshots
 
@@ -31,11 +28,13 @@ This is a shell script; it does not pretend to be more than that. It is backed b
 
 ### Setup
 
-1. Finish GNOME's setup wizard and run:
+1. Disable suspension on settings.
+2. Run the setup script:
 ```bash
-systemd-inhibit --what=sleep --why="Running desktop setup" bash ./setup.sh'' 
+git clone https://github.com/notawyvern/silverblue-enhanced &&
+bash ./silverblue-enhanced/setup-silverblue.sh 
 ```
-2. Enter your password and wait for reboot.
+3. Enter your password and wait for reboot.
 
 ### Shortcuts
 
