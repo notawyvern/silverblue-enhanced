@@ -2,6 +2,12 @@
 
 set -euo pipefail
 
+# Exits if you are root
+if [ "$EUID" -eq 0 ]; then
+    echo "WARNING: Do not run this script as root!"
+    exit 1
+fi
+
 ###############################################################################
 # GENERAL
 ###############################################################################
